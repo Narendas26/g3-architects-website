@@ -10,6 +10,11 @@
 
 
 /*Shared Styles*/
+main{
+    max-width:1440px;
+    margin: 0 auto;
+}
+
 .display-flex{
     display: flex;
 }
@@ -19,10 +24,25 @@
     color: #424242;
 }
 
+/*Customize Orange*/
+#text-3-design{
+    font-weight:700;
+    color:#FF900E;
+}
 
 /*dark 3*/
 .text-light-gray{
     color:#727272;
+}
+
+/*dark 4*/
+.text-black{
+    color:#131313;
+}
+
+.section-title{
+    font-size: 2.8rem;   
+    font-weight: 700;
 }
 
 .btn-primary{
@@ -38,6 +58,10 @@
 .btn-primary:hover{
     background-color: #4ec420;
     transition: 2s;
+}
+
+.common-description{
+    font-size:1rem;
 }
 
 /*header background color*/
@@ -86,22 +110,180 @@
     font-size:4rem;
 }
 
-.banner-description{
-    font-size:1em;
-}
-
 .banner-image{
     width: 100%;
+    padding-bottom: 40px;
 }
 
+/*Features Section*/
+.team-features{
+    max-width: 1318px;
+    align-items: center;
+    margin: 85px auto;
+}
 
-/*Responsive Media Query*/
+.team-image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap:24px;
+}
 
-/*For Mobile Device*/
+.Features{
+    margin-left:110px;
+    max-width: 535px;
+}
 
+#text-1-design{
+    font-weight:500;
+}
+
+#text-2-design{
+    font-weight:700;
+    color:#FF900E;
+}
+
+/*Responsive Media Query For Mobile Device*/
 @media screen and (max-width:576px){
-    .navbar, .nav-links{
+    .navbar, 
+    .nav-links, 
+    .team-features
+    {
         flex-direction: column;
     } 
+
+    .team-image{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .Features{
+        margin: 0 auto;
+        text-align: center;
+    }
+
 }
+
+@media screen and (min-width:577px) and (max-width:992px){
+    .team-features{
+        flex-direction: column;
+     }
+
+    .Features{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+
+/*Features Section: using grid area - Technique 2*/
+/* .features-description{
+    max-width: 537px;
+    font-size: 2.8 rem;
+}
+
+#text-1-design{
+    font-weight:500;
+}
+
+#text-2-design{
+    font-weight:700;
+}
+
+#text-3-design{
+    font-weight:700;
+    color:#FF900E;
+}
+
+
+#image-1{
+    grid-area:image-1;
+}
+
+#image-2{
+    grid-area:image-2;
+}
+
+#image-3{
+    grid-area:image-3;
+}
+
+#image-4{
+    grid-area:image-4;
+}
+
+.features-description{
+    grid-area:features-description;
+    align-self:center;
+    justify-self: center;  
+}
+
+.features{
+    max-width: 1368px;
+    margin: 80px auto;
+    gap:24px;
+    display: grid;
+    grid-template-areas:
+        "image-1 image-2 features-description "
+        "image-3 image-4 features-description "
+        ;
+} */
+
+/*Responsive Media Query*/
+/*For Mobile Device*/
+
+/* @media screen and (max-width:576px){
+    .navbar, .nav-links {
+        flex-direction: column;
+    } 
+
+    .features{
+        place-items: center; 
+        text-align: center; 
+        
+        grid-template-areas:
+        "image-1"
+        "image-2"
+        "image-3"
+        "image-4"
+        "features-description"
+        ;
+        
+    }
+
+} */
+
+/* @media screen and (min-width:577px) and (max-width:992px){
+
+    
+    #image-1,
+    #image-2,
+    #image-3,
+    #image-4,
+    .features-description{
+        grid-area: unset;
+    }
+
+    
+    .features{
+        display:flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+   
+    .all-img{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .all-img img{
+        width:100%;
+        height:auto;
+    } 
+} */
+
+
+
+
 
